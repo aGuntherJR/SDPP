@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogar A Sociedade do Pé-Perdido</title>
+    <link rel="shortcut icon" href="imgs/logoPadrao.png">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+    <header>
+        <nav id="inicio">
+            <ul>
+                <li><a href="index.html" class="nav-link" id="home-link">
+                        <span>I</span><span>n</span><span>i</span><span>c</span><span>i</span><span>o</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="calmaAiPaizao">
+        <p>Calma ai, essa parte ainda está em construção.</p>
+        <img src="imgs/calma-ai-paizao.png" alt="Calma ai paizão">
+    </main>
+
+    <script>
+        const navLinks = document.querySelectorAll('.nav-link');
+        const delay = 50;
+
+        navLinks.forEach(link => {
+            const letters = link.querySelectorAll('span');
+            let isAnimating = false;
+
+            link.addEventListener('mouseenter', () => {
+                if (isAnimating) return;
+                isAnimating = true;
+
+                //RingBearer>Tengwar
+                letters.forEach((letter, index) => {
+                    setTimeout(() => {
+                        letter.classList.add('tengwar-font');
+                    }, delay * index);
+                });
+
+                //Tengwar>RingBearer
+                const totalForwardDuration = delay * letters.length;
+                const totalBackwardDuration = delay * letters.length;
+                const buffer = 500;
+
+                setTimeout(() => {
+                    letters.forEach((letter, index) => {
+                        const reverseIndex = letters.length - 1 - index;
+                        setTimeout(() => {
+                            letter.classList.remove('tengwar-font');
+                        }, delay * reverseIndex);
+                    });
+
+                    setTimeout(() => {
+                        isAnimating = false;
+                    }, totalBackwardDuration);
+                }, totalForwardDuration + buffer);
+            });
+        });
+    </script>
+</body>
+
+</html>

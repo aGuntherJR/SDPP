@@ -32,7 +32,6 @@ body {
     padding-top: 100px;
     margin-left: auto;
     margin-right: auto;
-    
 }
 
 #sectionInicio {
@@ -45,13 +44,89 @@ body {
 }
 
 #sectionSobre {
+    text-align: justify;
     margin-left: 160px;
     margin-right: 200px;
     background-image: url('../imgs/oldScroll.png');
-    background-size: contain;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
     padding: 120px;
+}
+
+#sectionSobreTitulo {
+    text-align: center;
+    padding-top: 5%;
+}
+
+#sectionComoJogar {
+    padding-top: 5%;
+    text-align: center;
+}
+
+#sectionComoJogar img {
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#sectionContato {
+    padding-top: 5%;
+    text-align: center;
+}
+
+#underConstruction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5%;
+}
+
+#underConstruction img{
+    max-width: 10%;
+}
+
+footer {
+    width: 100%;
+    height: auto;
+    background: linear-gradient(to top, #2c3e2d 80%, #e8f5e9 99%);
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+footer nav ul li {
+    display: inline-block;
+    padding: 10px;
+}
+
+footer nav ul li a {
+    text-decoration: none;
+    color: goldenrod;
+}
+
+#dadosContato ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 15px;
+}
+
+#dadosContato ul li a {
+    display: block;
+    text-decoration: none;
+    color: goldenrod;
+    transition: background-image 0.3s;
+}
+
+#dadosContato ul li a:hover {
+    color: gold;
 }
 
 header {
@@ -88,11 +163,27 @@ header nav ul li a:hover {
 
 .tengwar-font {
     font-family: 'Tengwar', 'Ringbearer';
-
 }
 
 .nav-link {
     display: inline-block;
     width: 125px;
     text-align: center;
+}
+
+#calmaAiPaizao {
+    position: relative;
+    text-align: center;
+}
+
+#calmaAiPaizao p {
+    position: relative;
+    text-align: center;
+    margin-top: -10px;
+    margin-bottom: 0px;
+}
+
+#calmaAiPaizao img{
+    max-width: 100%;
+    margin: auto;
 }
