@@ -1,0 +1,98 @@
+@font-face {
+    font-family: 'Ringbearer';
+    src: url('fonts/ringbearer/RINGM___.TTF') format('truetype');
+}
+
+@font-face {
+    font-family: 'Tengwar';
+    src: url('fonts/tengwar-345-cdnfonts/TENGWAR4.TTF') format('truetype');
+}
+
+#logoHeader {
+    width: 200px;
+    margin-left: -20px;
+}
+
+#btnVoltaTopo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#btnVoltaTopo img {
+    width: 20px;
+}
+
+body {
+    background-color: #e8f5e9;
+    margin: 0;
+    font-family: 'Ringbearer', Raleway, Arial;
+    font-size: 16px;
+    padding-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+#sectionInicio {
+    margin-top: -20px;
+}
+
+#textoNormal {
+    font-family: Arial;
+    text-align: center;
+}
+
+#sectionSobre {
+    margin-left: 160px;
+    margin-right: 200px;
+    background-image: url('../imgs/oldScroll.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 120px;
+}
+
+header {
+    width: 100%;
+    background: linear-gradient(to bottom, #2c3e2d 80%, #e8f5e9 99%);
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    height: 80px;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 10px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: goldenrod;
+}
+
+header nav ul li a:hover {
+    color: gold;
+}
+
+#sectionInicio {
+    text-align: center;
+    text-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+
+.tengwar-font {
+    font-family: 'Tengwar', 'Ringbearer';
+
+}
+
+.nav-link {
+    display: inline-block;
+    width: 125px;
+    text-align: center;
+}

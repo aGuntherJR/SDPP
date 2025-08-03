@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Sociedade do Pé-Perdido</title>
+    <link rel="shortcut icon" href="imgs/logoPadrao.png">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+    <header>
+        <img id="logoHeader" src="imgs/logoExtenso.png" alt="logoHeaderProvisoria">
+        <nav id="menuPrincipal">
+            <ul>
+                <li>
+                    <a href="#sectionInicio" class="nav-link" id="home-link">
+                        <span>I</span><span>n</span><span>i</span><span>c</span><span>i</span><span>o</span>
+                    </a>
+                </li>
+                <li><a href="#sectionSobre" class="nav-link" id="home-link">
+                        <span>S</span><span>o</span><span>b</span><span>r</span><span>e</span></a></li>
+                <li><a href="#sectionComoJogar" class="nav-link" id="home-link">
+                        <span>C</span><span>o</span><span>m</span><span>o</span><span> </span>
+                        <span>J</span><span>o</span><span>g</span><span>a</span><span>r</span></a></li>
+                <li><a href="#sectionContato" class="nav-link" id="home-link">
+                        <span>C</span><span>o</span><span>n</span><span>t</span><span>a</span><span>t</span><span>o</span></a>
+                </li>
+                <li><a href="" class="nav-link" id="home-link">
+                        <span>J</span><span>o</span><span>g</span><span>a</span><span>r</span><span> </span>
+                        <span>A</span><span>g</span><span>o</span><span>r</span><span>a</span>
+                    </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="sectionInicio">
+            <h1>A Sociedade do Pé-Perdido</h1>
+        </section>
+        <section id="sectionSobre">
+            <h2>O que é A Sociedade do Pé-Perdido?</h2>
+            <p id="textoNormal">
+                Como não comecei a bolar o game ainda, segue a lore ai paizão.
+            </p>
+            <p>
+                Nas brumas da manhã do Condado, uma lenda se ergue. Não de dragões ou anéis, mas do destino que aguarda
+                o jovem Dofro Algodeiro, sobrinho de Balbo Fio. Com a promessa de uma grande jornada à sua frente, Dofro
+                se vê preso em um impasse digno de canções: seu tutor, o sábio e implacável Balbo, impôs-lhe uma prova
+                final.
+                <br><br>
+                Á sua frente, erguem-se As Duas Pilhas, montanhas de meias que se acumularam ao longo de gerações, um
+                caos de lã e algodão que desafia a ordem e a paciência. Dofro sabe que sua aventura só pode começar
+                quando a ordem for restaurada e cada par de meias estiverem em seu devido lugar.
+                <br><br>
+                Balbo, com um olhar que
+                tem 111 anos de experiência, impôs a missão, dizendo que é uma prova de caráterm de disciplina e ordem,
+                a primeira lição de qualquer grande jornada.
+                <br><br>
+                ... mas no fundo, Dofro suspeita que a verdadeira motivação é porque as pilhas estão bloqueando o
+                caminho para a dispensa do segundo café da manhã.
+            </p>
+        </section>
+        <section id="sectionComoJogar">
+            <h2>Como Jogar</h2>
+        </section>
+        <section id="sectionContato">
+            <h2>Contato</h2>
+        </section>
+    </main>
+
+    <a href="#sectionInicio" id="btnVoltaTopo">
+        <img src="imgs/voltaTopo.png" alt="Voltar para o topo">
+    </a>
+
+    <footer>
+
+    </footer>
+
+    <script>
+        const navLinks = document.querySelectorAll('.nav-link');
+        const delay = 50;
+
+        navLinks.forEach(link => {
+            const letters = link.querySelectorAll('span');
+            let isAnimating = false;
+
+            link.addEventListener('mouseenter', () => {
+                if (isAnimating) return;
+                isAnimating = true;
+
+                //RingBearer>Tengwar
+                letters.forEach((letter, index) => {
+                    setTimeout(() => {
+                        letter.classList.add('tengwar-font');
+                    }, delay * index);
+                });
+
+                //Tengwar>RingBearer
+                const totalForwardDuration = delay * letters.length;
+                const totalBackwardDuration = delay * letters.length;
+                const buffer = 500;
+
+                setTimeout(() => {
+                    letters.forEach((letter, index) => {
+                        const reverseIndex = letters.length - 1 - index;
+                        setTimeout(() => {
+                            letter.classList.remove('tengwar-font');
+                        }, delay * reverseIndex);
+                    });
+
+                    setTimeout(() => {
+                        isAnimating = false;
+                    }, totalBackwardDuration);
+                }, totalForwardDuration + buffer);
+            });
+        });
+    </script>
+
+</body>
+
+</html>
