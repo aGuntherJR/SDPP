@@ -8,6 +8,21 @@
     src: url('fonts/tengwar-345-cdnfonts/TENGWAR4.TTF') format('truetype');
 }
 
+.tengwar-font {
+    font-family: 'Tengwar', 'Ringbearer';
+}
+
+.nav-link {
+    display: inline-block;
+    width: 125px;
+    text-align: center;
+}
+
+#sectionInicio {
+    text-align: center;
+    text-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+
 #logoHeader {
     width: 200px;
     margin-left: -20px;
@@ -24,14 +39,12 @@
     width: 20px;
 }
 
-body {
-    background-color: #e8f5e9;
+#dadosContato ul{
+    display: flex;
+    list-style: none;
     margin: 0;
-    font-family: 'Ringbearer', Raleway, Arial;
-    font-size: 16px;
-    padding-top: 100px;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 0;
+    gap: 15px;
 }
 
 #sectionInicio {
@@ -39,8 +52,11 @@ body {
 }
 
 #textoNormal {
-    font-family: Arial;
-    text-align: center;
+    font-family: 'Ringbearer';
+    text-align: justify;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding-bottom: 50px;
 }
 
 #sectionSobre {
@@ -77,6 +93,17 @@ body {
     text-align: center;
 }
 
+#dadosContato ul li a {
+    display: block;
+    text-decoration: none;
+    color: goldenrod;
+    transition: background-image 0.3s;
+}
+
+#dadosContato ul li a:hover {
+    color: gold;
+}
+
 #underConstruction {
     display: flex;
     justify-content: space-between;
@@ -88,6 +115,34 @@ body {
     max-width: 10%;
 }
 
+#calmaAiPaizao {
+    position: relative;
+    text-align: center;
+}
+
+#calmaAiPaizao p {
+    position: relative;
+    text-align: center;
+    margin-top: -10px;
+    margin-bottom: 0px;
+}
+
+#calmaAiPaizao img{
+    max-width: 100%;
+    margin: auto;
+}
+
+body {
+    display: flexbox;
+    background-color: #e8f5e9;
+    margin: 0;
+    font-family: 'Ringbearer', Raleway, Arial;
+    font-size: 16px;
+    padding-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 footer {
     width: 100%;
     height: auto;
@@ -97,36 +152,6 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-}
-
-footer nav ul li {
-    display: inline-block;
-    padding: 10px;
-}
-
-footer nav ul li a {
-    text-decoration: none;
-    color: goldenrod;
-}
-
-#dadosContato ul{
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 15px;
-}
-
-#dadosContato ul li a {
-    display: block;
-    text-decoration: none;
-    color: goldenrod;
-    transition: background-image 0.3s;
-}
-
-#dadosContato ul li a:hover {
-    color: gold;
 }
 
 header {
@@ -156,41 +181,47 @@ header nav ul li a:hover {
     color: gold;
 }
 
-#sectionInicio {
-    text-align: center;
-    text-shadow: 5px 5px 10px rgba(0,0,0,0.5);
-}
-
-.tengwar-font {
-    font-family: 'Tengwar', 'Ringbearer';
-}
-
-.nav-link {
+footer nav ul li {
     display: inline-block;
-    width: 125px;
-    text-align: center;
+    padding: 10px;
 }
 
-#calmaAiPaizao {
-    position: relative;
-    text-align: center;
+footer nav ul li a {
+    text-decoration: none;
+    color: goldenrod;
 }
 
-#calmaAiPaizao p {
-    position: relative;
-    text-align: center;
-    margin-top: -10px;
-    margin-bottom: 0px;
-}
+@media (max-width: 550px) {
+    #menuPrincipal {
+        padding-top: 15px;
+    }
+    
+    #menuPrincipal ul {
+        font-size: 99%;
+        padding: 0;
+    }
 
-#calmaAiPaizao img{
-    max-width: 100%;
-    margin: auto;
+    #textoNormal {
+        text-align: justify;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    #sectionSobre {
+        padding: 50px 50px;
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
+
+    #sectionSobreTitulo {
+        padding: 0;
+        margin-top: 0;
+    }
 }
 
 @media (max-width: 768px) {
     header {
-        background: linear-gradient(to bottom, #2c3e2d 90%, #e8f5e9 95%);
+        background: linear-gradient(to bottom, #2C3E2D 90%, #E8F5E9 95%);
         height: 25%;
         flex-direction: column;
         justify-content: center;
@@ -198,38 +229,50 @@ header nav ul li a:hover {
         padding: 0px 0px;
     }
 
+    .nav-link {
+        width: auto;
+        padding: 10px;
+    }
+
     #logoHeader {
-        width: 100%;
+        width: 80%;
         margin-top: -15%;
         margin-bottom: -40%;
         padding-bottom: 5%;
     }
 
-    
     #menuPrincipal {
         margin-top: 15%;
+        margin-left: 0px;
+        padding: auto;
+        font-size: small;
     }
 
     #menuPrincipal ul {
-        flex-direction: column;
         align-items: center;
+        flex-wrap: nowrap;
+        justify-content: center;
         gap: 5px;
     }
 
-    /*Estou cobrindo o primeiro h1 (da linha 35 html) porque fica redundante nos aparelhos móveis*/
-    body {
-    background-color: #e8f5e9;
-    margin-top: auto;
-    font-family: 'Ringbearer', Raleway, Arial;
-    font-size: 16px;
-    padding-top: 100px;
-    margin-left: auto;
-    margin-right: auto;
+    #menuPrincipal ul li {
+        margin: 0 5px;
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    #textoNormal {
+        text-align: justify;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
     #sectionSobre {
-        margin: 20px 20px;
-        padding: 140px 20px;
+        margin: 0;
+    }
+
+    #sectionSobreTitulo {
+        margin-top: 100px;
     }
 
     #underConstruction img {
@@ -257,6 +300,17 @@ header nav ul li a:hover {
     #jogarAgora footer {  
         position: static;
     }
+    
+    /*Estou cobrindo o primeiro h1 (da linha 35 html) porque fica redundante nos aparelhos móveis*/
+    body {
+    background-color: #e8f5e9;
+    margin-top: auto;
+    font-family: 'Ringbearer', Raleway, Arial;
+    font-size: 16px;
+    padding-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -264,10 +318,22 @@ header nav ul li a:hover {
         padding-top: 80px;
     }
 
+    .nav-link {
+        width: auto;
+        padding: auto;
+    }
+
+#textoNormal {
+        text-align: justify;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
     #sectionSobre {
-        margin-left: 80px;
-        margin-right: 100px;
+        max-width: 100%;
         padding: 80px 40px;
+        box-sizing: border-box;
+        font-size: small;
     }
 
     #underConstruction img {
@@ -288,5 +354,16 @@ header nav ul li a:hover {
 
     #jogarAgora #calmaAiPaizao img {
         width: 70%;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1920px) {
+    #sectionSobre {
+        max-width: 100%;
+        padding: 100px 100px;
+        padding-top: 130px;
+        padding-bottom: 130px;
+        box-sizing: border-box;
+        font-size: large;
     }
 }
