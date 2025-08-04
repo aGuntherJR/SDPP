@@ -187,3 +187,106 @@ header nav ul li a:hover {
     max-width: 100%;
     margin: auto;
 }
+
+@media (max-width: 768px) {
+    header {
+        background: linear-gradient(to bottom, #2c3e2d 90%, #e8f5e9 95%);
+        height: 25%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 0px;
+    }
+
+    #logoHeader {
+        width: 100%;
+        margin-top: -15%;
+        margin-bottom: -40%;
+        padding-bottom: 5%;
+    }
+
+    
+    #menuPrincipal {
+        margin-top: 15%;
+    }
+
+    #menuPrincipal ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    /*Estou cobrindo o primeiro h1 (da linha 35 html) porque fica redundante nos aparelhos móveis*/
+    body {
+    background-color: #e8f5e9;
+    margin-top: auto;
+    font-family: 'Ringbearer', Raleway, Arial;
+    font-size: 16px;
+    padding-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    #sectionSobre {
+        margin: 20px 20px;
+        padding: 140px 20px;
+    }
+
+    #underConstruction img {
+        max-width: 40%;
+    }
+
+    #dadosContato {
+        font-size: 14px;
+    }
+
+    #jogarAgora {
+        display: flex;
+        padding-top: 300px;
+        flex-direction: column;
+    }
+
+    #jogarAgora header {
+        height: 10%;
+    }
+
+    #jogarAgora #calmaAiPaizao {
+        padding-bottom: 30px;
+    }
+
+    #jogarAgora footer {  
+        position: static;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    body {
+        padding-top: 80px;
+    }
+
+    #sectionSobre {
+        margin-left: 80px;
+        margin-right: 100px;
+        padding: 80px 40px;
+    }
+
+    #underConstruction img {
+        max-width: 25%;
+    }
+
+    #dadosContato ul li a {
+        font-size: 14px;
+    }
+
+    #jogarAgora header nav ul li a {
+        padding: 10px 15px;
+    }
+
+    #jogarAgora #calmaAiPaizao p {
+        font-size: 18px;
+    }
+
+    #jogarAgora #calmaAiPaizao img {
+        width: 70%;
+    }
+}
