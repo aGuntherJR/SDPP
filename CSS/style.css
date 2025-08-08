@@ -19,15 +19,131 @@
 }
 
 .galeria-imagem {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     justify-content: center;
+    justify-items: center;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
+    margin: 40px auto;
+    padding: 15px;
+    max-width: 900px;
+    border: 2px solid #5a4b3d;
+    border-radius: 12px;
+    background-color: #fff8e1;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.galeria-titulo-texto {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-family: 'Ringbearer', Arial, sans-serif;
+    font-size: 1.2em;
+    color: #4a3b2f;
+    margin-bottom: 20px;
+    padding: 0 10px;
 }
 
 .galeria-imagem img {
-    max-width: 45%;
+    width: 100%;
+    display: block;
+    object-fit: contain;
+    transition: transform 0.2s ease-in-out;
+    height: 100%;
+    padding: 0;
+    background-color: #fdfdfd;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.galeria-imagem img:hover {
+    transform: scale(1.1);
+}
+
+.galeria-meia {
+    width: 80%;
+    max-width: 600px;
+    height: 400px;
+    overflow-y: auto;
+    border: 2px solid #5a4b3d;
+    border-radius: 12px;
+    padding: 15px;
+    background-color: #fff8e1;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+}
+
+.galeria-meia::-webkit-scrollbar {
+    width: 10px;
+}
+
+.galeria-meia::-webkit-scrollbar-track {
+    background: #f1e0c5;
+    width: 10px;
+}
+
+.galeria-meia::-webkit-scrollbar-thumb {
+    background: #f1e0c5;
+    border-radius: 10px;
+}
+
+.galeria-meia::-webkit-scrollbar-thumb:hover {
+    background: #857463;
+}
+
+.meia-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 15px;
+    padding: 5px;
+    justify-content: center;
+}
+
+.meia-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    object-fit: contain;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    background-color: #fdfdfd;
+    padding: 5px;
+}
+
+.meia-grid img:hover {
+    transform: scale(1.05);
+}
+
+.galeria-meia h2 {
+    text-align: center;
+    color: #4a3b2f;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.galeria-tutorial {
+    border: 2px solid #5a4b3d;
+    border-radius: 12px;
+    background-color: #fff8e1;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    margin: 40px auto;
+    max-width: 900px;
+    text-align: center;
+}
+
+.galeria-tutorial p {
+    text-align: justify;
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+.galeria-tutorial img {
+    display: block;
+    margin: 20px auto;
+    max-width: 80%;
     height: auto;
 }
 
@@ -232,6 +348,10 @@ footer nav ul li a {
         padding: 0;
         margin-top: 0;
     }
+
+    .meia-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 768px) {
@@ -247,6 +367,20 @@ footer nav ul li a {
     .nav-link {
         width: auto;
         padding: 10px;
+    }
+
+    .galeria-imagem {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+
+    .galeria-meia {
+        width: 95%;
+        height: 350px;
+    }
+
+    .meia-grid {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        gap: 10px;
     }
 
     #logoHeader {
@@ -354,7 +488,7 @@ footer nav ul li a {
         padding: auto;
     }
 
-#textoNormal {
+    #textoNormal {
         text-align: justify;
         margin-left: 20px;
         margin-right: 20px;
@@ -385,6 +519,11 @@ footer nav ul li a {
 
     #jogarAgora #calmaAiPaizao img {
         width: 70%;
+    }
+
+    .galeria-imagem {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 20px;
     }
 }
 
