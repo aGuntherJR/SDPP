@@ -411,7 +411,7 @@ footer nav ul li a {
 
     .meia-grid {
         grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-        gap: 10px;
+        gap: 25px;
     }
 
     #logoHeader {

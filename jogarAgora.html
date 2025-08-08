@@ -14,7 +14,12 @@
         <nav id="inicio">
             <ul>
                 <li><a href="index.html" class="nav-link" id="home-link">
-                        <span>I</span><span>n</span><span>i</span><span>c</span><span>i</span><span>o</span></a></li>
+                        <span>I</span><span>n</span><span>i</span><span>c</span><span>i</span><span>o</span></a>
+                </li>
+                <li><a href="https://github.com/aGuntherJR/SDPP/releases/download/v1.0/Sociedade.do.Pe-Perdido.zip"
+                        class="nav-link" id="home-link">
+                        <span>D</span><span>o</span><span>w</span><span>n</span><span>l</span><span>o</span><span>a</span><span>d</span></a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -34,6 +39,10 @@
             let isAnimating = false;
 
             link.addEventListener('mouseenter', () => {
+                if (window.innerWidth <= 768) {
+                    return;
+                }
+
                 if (isAnimating) return;
                 isAnimating = true;
 

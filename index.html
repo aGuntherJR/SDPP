@@ -177,6 +177,10 @@
             let isAnimating = false;
 
             link.addEventListener('mouseenter', () => {
+                if (window.innerWidth <= 768) {
+                    return;
+                }
+
                 if (isAnimating) return;
                 isAnimating = true;
 
