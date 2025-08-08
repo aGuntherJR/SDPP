@@ -71,6 +71,7 @@
     background-color: #fff8e1;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .galeria-meia::-webkit-scrollbar {
@@ -235,15 +236,22 @@
     color: gold;
 }
 
-#underConstruction {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5%;
+#monteEsquerdo {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-width: 40vw;
+    height: auto;
+    z-index: -1;
 }
 
-#underConstruction img{
-    max-width: 10%;
+#monteDireito {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-width: 40vw;
+    height: auto;
+    z-index: -1;
 }
 
 #calmaAiPaizao {
@@ -263,8 +271,14 @@
     margin: auto;
 }
 
+#jogarAgora main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 80px);
+}
+
 body {
-    display: flexbox;
     background-color: #e8f5e9;
     margin: 0;
     font-family: 'Ringbearer', Raleway, Arial;
@@ -272,6 +286,10 @@ body {
     padding-top: 100px;
     margin-left: auto;
     margin-right: auto;
+}
+
+main {
+    position: relative;
 }
 
 footer {
@@ -349,6 +367,15 @@ footer nav ul li a {
         margin-top: 0;
     }
 
+    #sectionComoJogar {
+    margin-left: 0;
+    margin-right: 0;
+    }
+
+    .galeria-tutorial p {
+        max-width: 90%;
+    }
+
     .meia-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -362,6 +389,10 @@ footer nav ul li a {
         justify-content: center;
         align-items: center;
         padding: 0px 0px;
+    }
+
+    main {
+
     }
 
     .nav-link {
@@ -449,6 +480,15 @@ footer nav ul li a {
     #jogarAgora footer {  
         position: static;
     }
+
+    #sectionComoJogar {
+    margin-left: 0;
+    margin-right: 0;
+    }
+
+    .galeria-tutorial p {
+        max-width: 90%;
+    }
     
     /*Estou cobrindo o primeiro h1 (da linha 35 html) porque fica redundante nos aparelhos móveis*/
     body {
@@ -456,7 +496,7 @@ footer nav ul li a {
     margin-top: auto;
     font-family: 'Ringbearer', Raleway, Arial;
     font-size: 16px;
-    padding-top: 100px;
+    padding-top: 25vh;
     margin-left: auto;
     margin-right: auto;
     }
