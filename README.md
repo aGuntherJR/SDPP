@@ -10,12 +10,12 @@ O mapa também contém alguns pontos especíicas que ao serem clicados, ativam d
 
 
 ## Como jogar
-1 - Acesse o site oficial: https://aguntherjr.github.io/SDPP/;
-2 - Clique no botão "Jogar Agora" no header;
-3 - Assim que o jogo carregar, clique em uma das duas pilhas de meias;
-4 - Procure a meia que aparecer no cenário;
-5 - Arraste a meia até o cesto de meias;
-5 - Explore o cenário para encontrar pontos interativos e animações.
+1. Acesse o site oficial: https://aguntherjr.github.io/SDPP/;
+2. Clique no botão "Jogar Agora" no header;
+3. Assim que o jogo carregar, clique em uma das duas pilhas de meias;
+4. Procure a meia que aparecer no cenário;
+5. Arraste a meia até o cesto de meias;
+6. Explore o cenário para encontrar pontos interativos e animações.
 
   OBS: Também é possível baixar o jogo acessando a tela "Jogar Agora" no site e clicando no botão Download.
 
