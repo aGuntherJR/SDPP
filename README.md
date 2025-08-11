@@ -31,7 +31,7 @@ O mapa também contém alguns pontos especíicas que ao serem clicados, ativam d
 - O site oficial contém todas as informações sobre o jogo;
 - O JS foi utilizado apenas na transição de fontes Ringbearer > Tengwar.
 
-'''
+'''plaintext
 SDPP/
 ├── background-imgs/
 ├── CSS/
