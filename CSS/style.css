@@ -586,17 +586,17 @@ body::before {
     width: 100vw;
     height: 100vh;
     background-image:
-    url('/background-imgs/icons8-frodo-100.png'),
-    url('/background-imgs/icons8-one-ring-100.png'),
-    url('/background-imgs/icons8-leaf-of-lorien-100.png'),
-    url('/background-imgs/socks1.png'),
-    url('/background-imgs/icons8-one-ring-100.png'),
-    url('/background-imgs/socks2.png'),
-    url('/background-imgs/icons8-legolas-100.png'),
-    url('/background-imgs/socks3.png'),
-    url('/background-imgs/socks1.png'),
-    url('/background-imgs/icons8-leaf-of-lorien-100.png'),
-    url('/background-imgs/socks3.png');
+    url('../background-imgs/icons8-frodo-100.png'),
+    url('../background-imgs/icons8-one-ring-100.png'),
+    url('../background-imgs/icons8-leaf-of-lorien-100.png'),
+    url('../background-imgs/socks1.png'),
+    url('../background-imgs/icons8-one-ring-100.png'),
+    url('../background-imgs/socks2.png'),
+    url('../background-imgs/icons8-legolas-100.png'),
+    url('../background-imgs/socks3.png'),
+    url('../background-imgs/socks1.png'),
+    url('../background-imgs/icons8-leaf-of-lorien-100.png'),
+    url('../background-imgs/socks3.png');
     background-repeat: no-repeat;
     background-size: 10vw;
     background-position:
